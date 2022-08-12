@@ -1,4 +1,9 @@
-export const scrollItems = [
+type scrollItemsType = {
+  id: string;
+  item: string;
+};
+
+export const scrollItems: scrollItemsType[] = [
   {
     id: '1',
     item: 'First Card',
