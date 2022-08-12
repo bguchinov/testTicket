@@ -7,8 +7,6 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 import {TextInput, View} from 'react-native';
 import {useTimer} from './useTimer';
 
-let timer: number | null = null;
-
 export const useMain = () => {
   const fontSize = useSharedValue(20);
   let pointsRef = useRef<TextInput>(null);
@@ -18,7 +16,7 @@ export const useMain = () => {
   const [points, setPoints] = useState(0);
   const [scoreBoardPosition, setScoreBoardPosition] = useState({x: 0, y: 0});
   const [animationInProgress, setAnimationInProgress] = useState(false);
-  const {timerId, setNewTimer} = useTimer();
+  const {setNewTimer} = useTimer();
 
   let memoizedRewards = useMemo(() => rewardPoints, [rewardPoints]);
   let memoizedPoints = useMemo(() => points, [points]);

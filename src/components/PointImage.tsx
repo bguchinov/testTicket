@@ -9,7 +9,7 @@ type PointImageProps = {
   animationInProgress: boolean;
   index: number;
   isLast: boolean;
-  onAnimationEnd: any;
+  onAnimationEnd: () => void;
 };
 
 export const PointImage = (props: PointImageProps) => {
